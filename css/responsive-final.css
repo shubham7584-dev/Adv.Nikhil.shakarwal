@@ -1,0 +1,1155 @@
+/* =========================================================
+   FINAL RESPONSIVE SAFETY LAYER
+   Applies only layout/overflow behavior. No content or visual redesign.
+========================================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, video, iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+.container {
+    width: min(90%, 1300px);
+    max-width: 1300px;
+}
+
+@media (min-width: 1200px) {
+    .navbar > nav { margin-left: auto !important; }
+    .navbar > .contact-btn { margin-left: 28px !important; flex-shrink: 0; }
+}
+
+/* =========================================================
+   DESKTOP / LAPTOP: 992px–1399px
+========================================================= */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .navbar {
+        gap: 12px !important;
+    }
+
+    .logo {
+        flex: 0 1 225px !important;
+        max-width: 225px;
+    }
+
+    .nav-links {
+        gap: 10px !important;
+        margin-left: 16px !important;
+    }
+
+    .navbar > nav {
+        transform: none !important;
+        min-width: 0;
+    }
+
+    .navbar > nav .nav-links > li > a {
+        font-size: 15px !important;
+    }
+
+    .contact-btn {
+        margin-left: 4px !important;
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   TABLET + MOBILE NAVIGATION: <=991px
+========================================================= */
+@media (max-width: 991px) {
+    .top-bar .container,
+    .navbar,
+    .footer-grid,
+    .services-contact .container,
+    .service-detail-cta .container {
+        max-width: 100%;
+    }
+
+    .navbar {
+        width: 92%;
+        min-height: 78px !important;
+        gap: 10px !important;
+        justify-content: space-between !important;
+    }
+
+    .logo {
+        flex: 1 1 auto !important;
+        width: auto !important;
+        max-width: calc(100% - 58px) !important;
+        min-width: 0 !important;
+    }
+
+    .logo h2 {
+        white-space: normal !important;
+        line-height: 1.2;
+    }
+
+    .logo p {
+        white-space: normal;
+        line-height: 1.35;
+    }
+
+    .navbar > nav {
+        position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+        min-width: 0;
+    }
+
+    .menu-toggle {
+        display: grid !important;
+        place-items: center;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        line-height: 1;
+        z-index: 10002;
+    }
+
+    .contact-btn {
+        display: none !important;
+    }
+
+    .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        left: auto !important;
+        width: min(360px, 88vw) !important;
+        max-width: 88vw !important;
+        height: 100dvh !important;
+        max-height: 100dvh !important;
+        padding: 88px 16px 28px !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        gap: 5px !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        z-index: 10000 !important;
+    }
+
+    .nav-links.active {
+        right: 0 !important;
+    }
+
+    .nav-links > li {
+        width: 100% !important;
+        flex: 0 0 auto;
+        text-align: center;
+    }
+
+    .nav-links > li > a {
+        display: flex !important;
+        width: 100%;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        white-space: normal !important;
+        text-align: center;
+        font-size: 17px !important;
+        line-height: 1.35;
+        padding: 10px 8px !important;
+    }
+
+    /* Mobile dropdowns: contained, scrollable, and never wider than the menu. */
+    .nav-links .has-dropdown {
+        width: 100% !important;
+    }
+
+    .nav-links .has-dropdown > a {
+        justify-content: center !important;
+    }
+
+    .nav-links .dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        max-height: min(230px, 32dvh) !important;
+        margin: 2px 0 6px !important;
+        padding: 4px 0 !important;
+        display: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+
+    .nav-links .has-dropdown.is-open > .dropdown-menu {
+        display: block !important;
+    }
+
+    .nav-links .has-dropdown:hover > .dropdown-menu,
+    .nav-links .has-dropdown:focus-within > .dropdown-menu {
+        display: none;
+    }
+
+    .nav-links .has-dropdown.is-open:hover > .dropdown-menu,
+    .nav-links .has-dropdown.is-open:focus-within > .dropdown-menu {
+        display: block !important;
+    }
+
+    .nav-links .dropdown-menu li,
+    .nav-links .dropdown-menu li a {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .nav-links .dropdown-menu li a {
+        min-height: 40px;
+        padding: 8px 10px !important;
+        font-size: 14px !important;
+        line-height: 1.35;
+        white-space: normal !important;
+        text-align: center;
+    }
+
+    /* Two-column content collapses before it can become cramped. */
+    .contact-grid,
+    .office-grid,
+    .service-layout,
+    .service-detail-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-card {
+        position: static !important;
+    }
+
+    .services-grid,
+    .practice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-detail-image img {
+        height: auto;
+        max-height: 480px;
+    }
+}
+
+/* =========================================================
+   LARGE PHONE / SMALL TABLET: <=768px
+========================================================= */
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 85svh;
+    }
+
+    .hero-content {
+        width: min(92%, 700px);
+        padding: 90px 0 70px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(30px, 7vw, 40px) !important;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        width: 100% !important;
+        max-width: 650px;
+    }
+
+    .hero-btns {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .hero-btn {
+        max-width: 100%;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .appointment-left h2 {
+        font-size: clamp(28px, 6vw, 34px) !important;
+        line-height: 1.25;
+    }
+
+    .expertise-grid,
+    .work-grid,
+    .testimonial-slider,
+    .blog-grid,
+    .services-grid,
+    .practice-grid,
+    .process-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .counter-section .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .form-row,
+    .enquiry-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+        padding: 28px !important;
+    }
+
+    .map-wrap {
+        height: 320px !important;
+    }
+
+    .map-box iframe {
+        width: 100% !important;
+        height: 320px !important;
+    }
+
+    .service-main,
+    .services-section,
+    .about,
+    .expertise,
+    .work,
+    .testimonials,
+    .appointment,
+    .blogs,
+    .office-map {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .service-detail-section {
+        padding: 65px 0;
+    }
+
+    .service-detail-hero {
+        padding: 80px 20px 60px !important;
+    }
+
+    .service-detail-content h2 {
+        font-size: clamp(28px, 7vw, 34px) !important;
+    }
+
+    .service-detail-image img {
+        height: 330px !important;
+    }
+
+    .practice-hero h1,
+    .page-hero h1,
+    .contact-hero h1,
+    .services-hero h1 {
+        font-size: clamp(31px, 8vw, 42px) !important;
+        line-height: 1.2;
+    }
+
+    .practice-cta {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .site-footer .container {
+        display: block !important;
+    }
+}
+
+/* =========================================================
+   SMALL PHONES: <=576px
+========================================================= */
+@media (max-width: 576px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .navbar {
+        width: calc(100% - 30px) !important;
+    }
+
+    .logo {
+        max-width: calc(100% - 52px) !important;
+    }
+
+    .logo h2 {
+        font-size: clamp(13px, 4vw, 17px) !important;
+    }
+
+    .logo p {
+        font-size: 8px !important;
+        letter-spacing: .35px;
+    }
+
+    .menu-toggle {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .nav-links {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .nav-links .dropdown-menu {
+        max-height: 34dvh !important;
+    }
+
+    .hero-content {
+        padding-top: 75px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(27px, 8.5vw, 34px) !important;
+    }
+
+    .hero-content p {
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+    }
+
+    .hero-btn {
+        width: min(230px, 100%);
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .appointment-left h2 {
+        font-size: clamp(25px, 7.5vw, 30px) !important;
+    }
+
+    .section-heading p,
+    .about-content p,
+    .appointment-left > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .work-card,
+    .testimonial,
+    .blog-content,
+    .expertise-content {
+        padding: 22px !important;
+    }
+
+    .appointment-container {
+        padding: 22px 16px !important;
+    }
+
+    .appointment form input,
+    .appointment form select,
+    .appointment form textarea,
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .map-wrap {
+        height: 290px !important;
+    }
+
+    .map-box iframe {
+        height: 290px !important;
+    }
+
+    .service-content h2 {
+        font-size: 27px !important;
+    }
+
+    .service-content p,
+    .service-list li,
+    .service-detail-content > p,
+    .service-detail-content li {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .service-feature-image {
+        max-height: 330px;
+        margin-bottom: 28px;
+    }
+
+    .service-cta,
+    .practice-cta {
+        padding: 24px !important;
+    }
+
+    .footer-grid {
+        gap: 30px !important;
+    }
+
+    .whatsapp,
+    .whatsapp-btn {
+        max-width: calc(100vw - 30px);
+    }
+}
+
+/* =========================================================
+   EXTRA-SMALL PHONES: <=360px
+========================================================= */
+@media (max-width: 360px) {
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .navbar {
+        width: calc(100% - 24px) !important;
+    }
+
+    .logo h2 {
+        font-size: 12px !important;
+    }
+
+    .logo p {
+        font-size: 7px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 26px !important;
+    }
+
+    .hero-content p {
+        font-size: 13px !important;
+    }
+
+    .counter-section .container {
+        gap: 8px !important;
+    }
+
+    .counter-box {
+        padding: 20px 6px !important;
+    }
+
+    .counter-box h2 {
+        font-size: 32px !important;
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+        padding: 20px !important;
+    }
+}
+
+/* =========================================================
+   VERY LARGE SCREENS: >=1400px
+   Keep content centered rather than allowing text to stretch.
+========================================================= */
+@media (min-width: 1400px) {
+    .navbar > nav {
+        transform: none !important;
+    }
+
+    .nav-links {
+        gap: 24px !important;
+    }
+
+    .hero-content,
+    .section-heading,
+    .about-container,
+    .appointment-container {
+        max-width: 1300px;
+    }
+}
+
+/* Dynamic viewport fallback for older mobile browsers. */
+@supports not (height: 100dvh) {
+    @media (max-width: 991px) {
+        .nav-links { height: 100vh !important; max-height: 100vh !important; }
+    }
+}
+/* User-requested desktop navbar alignment: keep the navigation and appointment button further right. */
+@media (min-width: 1200px) {
+    .navbar > nav { transform: translateX(24px) !important; }
+    .navbar > .contact-btn { transform: translateX(24px); }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar > nav { transform: translateX(12px) !important; }
+    .navbar > .contact-btn { transform: translateX(12px); }
+}
+
+/* Home profile badge: use a legal scales icon instead of the years counter. */
+.about-badge {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.about-badge > i {
+    font-size: 28px !important;
+    line-height: 1 !important;
+}
+
+
+/* =========================================================
+   FINAL HEADER ALIGNMENT FIX
+   Keeps brand and navigation separated on desktop/laptop.
+========================================================= */
+@media (min-width: 992px) {
+    header .navbar {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 24px !important;
+        overflow: visible !important;
+    }
+
+    header .navbar > .logo {
+        flex: 0 1 300px !important;
+        width: auto !important;
+        min-width: 220px !important;
+        max-width: 300px !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    header .navbar > nav {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        transform: none !important;
+        overflow: visible !important;
+    }
+
+    header .navbar > nav .nav-links {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 24px !important;
+        margin: 0 !important;
+    }
+
+    header .navbar > nav .nav-links > li {
+        flex: 0 0 auto !important;
+    }
+
+    header .navbar > nav .nav-links > li > a {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 7px !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* Laptop widths: give the brand and menu enough breathing room. */
+@media (min-width: 992px) and (max-width: 1300px) {
+    header .navbar {
+        gap: 16px !important;
+    }
+
+    header .navbar > .logo {
+        flex-basis: 215px !important;
+        min-width: 200px !important;
+        max-width: 215px !important;
+    }
+
+    header .navbar > nav .nav-links {
+        gap: 14px !important;
+    }
+
+    header .navbar > nav .nav-links > li > a {
+        font-size: 15px !important;
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+}
+
+/* Never allow the desktop navigation to collide with the brand. */
+@media (min-width: 992px) and (max-width: 1120px) {
+    header .navbar > .logo {
+        flex-basis: 185px !important;
+        min-width: 175px !important;
+        max-width: 185px !important;
+    }
+
+    header .navbar > nav .nav-links {
+        gap: 9px !important;
+    }
+
+    header .navbar > nav .nav-links > li > a {
+        font-size: 14px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION HARDENING
+   Fixes touch scrolling and Back/Forward cache behaviour.
+========================================================= */
+@media (max-width: 991px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body.mobile-menu-open {
+        overflow: hidden !important;
+        touch-action: none;
+    }
+
+    .nav-links {
+        touch-action: pan-y;
+        overscroll-behavior: contain;
+    }
+
+    .nav-links .has-dropdown > .dropdown-toggle {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    .nav-links .dropdown-menu {
+        max-height: min(45dvh, 360px) !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+
+    .nav-links .dropdown-menu li a {
+        min-height: 44px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-links {
+        padding-top: 78px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .nav-links .dropdown-menu {
+        max-height: 42dvh !important;
+    }
+
+    .nav-links > li > a {
+        min-height: 46px;
+    }
+}
+
+
+/* =========================================================
+   V5 HOME HEADER: restore the original white navigation at page top
+========================================================= */
+body.home-page > header:not(.sticky) {
+    background: #ffffff !important;
+    color: #222 !important;
+}
+body.home-page > header:not(.sticky) .logo h2 { color: var(--primary) !important; }
+body.home-page > header:not(.sticky) .logo p { color: #777 !important; }
+body.home-page > header:not(.sticky) .nav-links > li > a { color: #222 !important; }
+body.home-page > header:not(.sticky) .nav-links > li > a:hover,
+body.home-page > header:not(.sticky) .nav-links > li > a.active { color: var(--gold-dark) !important; }
+body.home-page > header:not(.sticky) .menu-toggle { color: var(--primary) !important; }
+
+
+/* V11 HOME HEADER SCROLL FIX — scoped to shared header states only.
+   Keep normal button dimensions untouched; only change header colours/position. */
+body.smart-header-active > header {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    z-index: 1000 !important;
+    box-sizing: border-box !important;
+}
+body.smart-header-active.smart-contact-hidden > header {
+    top: 0 !important;
+    background-color: #06251d !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,.16) !important;
+}
+body.smart-header-active.smart-contact-hidden > header .navbar {
+    background: transparent !important;
+}
+body.smart-header-active.smart-contact-hidden > header .logo h2,
+body.smart-header-active.smart-contact-hidden > header .logo p,
+body.smart-header-active.smart-contact-hidden > header .nav-links > li > a {
+    color: #fff !important;
+}
+body.smart-header-active.smart-contact-hidden > header .logo-mark {
+    color: var(--gold, #c9a45c) !important;
+}
+body.smart-header-active.smart-contact-hidden > header .nav-links > li > a:hover,
+body.smart-header-active.smart-contact-hidden > header .nav-links > li > a.active {
+    color: var(--gold, #c9a45c) !important;
+}
+body.smart-header-active.smart-contact-hidden > header .contact-btn {
+    /* Preserve the site's original button sizing. */
+    background-color: var(--gold, #c9a45c) !important;
+    color: #fff !important;
+}
+body.smart-header-active.smart-contact-visible > header {
+    position: fixed !important;
+    top: var(--smart-topbar-h, 52px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: #fff !important;
+    z-index: 1000 !important;
+}
+body.smart-header-active.smart-contact-visible > header .navbar {
+    background: #fff !important;
+}
+
+/* V11 NAV CONSISTENCY FIX: keep the Our Expertise dropdown trigger the same
+   typographic size as the other top-level navigation links. Scoped to header only. */
+header .navbar > nav .nav-links > li.has-dropdown > a.dropdown-toggle {
+    font-family: inherit !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: inherit !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    transform: none !important;
+    flex-shrink: 0 !important;
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+    header .navbar > nav .nav-links > li.has-dropdown > a.dropdown-toggle {
+        font-size: 15px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1120px) {
+    header .navbar > nav .nav-links > li.has-dropdown > a.dropdown-toggle {
+        font-size: 14px !important;
+    }
+}
+
+
+/* =========================================================
+   V12 RESPONSIVE PASS — phone, tablet, laptop and desktop
+   Additive overrides; desktop layout is intentionally preserved.
+========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 90px; }
+body { width: 100%; min-width: 0; }
+img, video, iframe, svg { max-width: 100%; }
+img { height: auto; }
+iframe { max-width: 100%; }
+.container, .section-container, .page-container, main, section { min-width: 0; }
+.container { width: min(92%, 1300px); margin-left: auto; margin-right: auto; }
+[class*="-grid"], .about-container, .appointment-container, .footer-grid,
+.blog-layout, .service-layout, .contact-container { min-width: 0; }
+.grid, [class*="-grid"] { min-width: 0; }
+.card, article, .blog-card, .service-card, .expertise-card { min-width: 0; }
+h1, h2, h3, h4, h5, p, a, li, span, label { overflow-wrap: anywhere; }
+input, select, textarea, button { max-width: 100%; }
+input, select, textarea { min-width: 0; }
+table { max-width: 100%; }
+
+@media (max-width: 991px) {
+  html, body { overflow-x: clip; }
+  .container { width: min(92%, 760px); }
+  section { scroll-margin-top: 80px; }
+  header .navbar { width: 100%; max-width: 100%; padding: 12px 4%; gap: 12px; }
+  header .navbar > .logo { flex: 1 1 auto; min-width: 0; max-width: calc(100% - 60px); }
+  header .navbar > .logo img { max-width: 100%; object-fit: contain; }
+  header .navbar > nav { flex: 0 0 auto; min-width: 0; }
+  header .navbar > .contact-btn { display: none !important; }
+  header .menu-toggle { display: flex !important; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; font-size: 27px; }
+  header .nav-links { width: min(88vw, 360px) !important; max-width: 100vw; height: 100vh !important; height: 100dvh !important; max-height: 100vh; max-height: 100dvh; padding: 84px 18px 24px !important; gap: 6px !important; align-items: stretch !important; justify-content: flex-start !important; overflow-x: hidden; overflow-y: auto; }
+  header .nav-links > li { width: 100%; flex: 0 0 auto; }
+  header .nav-links > li > a { display: flex !important; align-items: center; justify-content: center; width: 100%; min-height: 44px; padding: 10px 8px !important; white-space: normal !important; text-align: center; }
+  header .nav-links .dropdown-menu { position: static !important; width: 100% !important; min-width: 0 !important; max-width: 100%; max-height: 38dvh !important; overflow-y: auto !important; }
+  .hero { min-height: 560px; height: auto; min-height: min(760px, 88svh); padding: 120px 0 70px; }
+  .hero-content { width: min(92%, 760px); max-width: 100%; }
+  .hero-content h1 { font-size: clamp(32px, 5.3vw, 46px) !important; line-height: 1.18; overflow-wrap: anywhere; }
+  .hero-content p { width: 100%; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .hero-btns { flex-wrap: wrap; }
+  .about-container, .appointment-container, .contact-container, .service-layout, .blog-layout { grid-template-columns: minmax(0, 1fr) !important; }
+  .about-image, .about-content, .appointment-left, .appointment-right { width: 100%; min-width: 0; }
+  .expertise-grid, .work-grid, .blog-grid, .testimonial-slider, .services-grid, .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-image img, .work-card img, .blog-card img, .service-card img { max-width: 100%; }
+  .appointment-form, form { min-width: 0; }
+  .map-box iframe, iframe.map { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .container { width: calc(100% - 32px); }
+  section { padding-left: 0; padding-right: 0; }
+  .hero { min-height: 570px; padding: 112px 0 64px; }
+  .hero-content { width: calc(100% - 32px); text-align: center; }
+  .hero-content h1 { font-size: clamp(28px, 8vw, 36px) !important; line-height: 1.2; }
+  .hero-content h5 { font-size: 12px; line-height: 1.5; letter-spacing: 1.3px; }
+  .hero-content p { font-size: 15px; line-height: 1.75; }
+  .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-btns > *, .hero-btn { width: 100%; max-width: 320px; margin-left: auto; margin-right: auto; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading h2, .about-content h2, .appointment-left h2 { font-size: clamp(25px, 7vw, 32px); line-height: 1.25; }
+  .section-heading p, .about-content p, .blog-content p, .testimonial p { font-size: 15px; line-height: 1.75; }
+  .expertise-grid, .work-grid, .blog-grid, .testimonial-slider, .services-grid, .footer-grid,
+  .counter-section .container, .about-highlights, .education-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .expertise-content, .work-card, .testimonial, .blog-content, .service-card, .contact-form-card, .contact-info-card { padding: 20px !important; }
+  .expertise-content h3, .blog-content h3, .work-card h3 { font-size: 20px; line-height: 1.35; }
+  .about-badge, .experience-badge { max-width: calc(100% - 24px); }
+  .about-badge { right: 12px; bottom: 12px; }
+  .experience-badge { left: 12px; bottom: 12px; }
+  .map-box iframe, .map-box iframe, iframe.map { height: 300px; }
+  .footer-grid { gap: 28px; }
+  .footer-about, .footer-links, .footer-contact { min-width: 0; overflow-wrap: anywhere; }
+  .top-bar { display: none !important; }
+  .navbar { min-height: 72px !important; }
+  .logo h2 { font-size: clamp(15px, 4.3vw, 20px); line-height: 1.2; }
+  .logo p { font-size: 10px; line-height: 1.35; }
+  .logo img { max-height: 52px; width: auto; }
+  .about, .appointment { padding-top: 56px; padding-bottom: 56px; }
+  .counter-box { padding: 22px; }
+  .counter-box h2 { font-size: 38px; }
+  .quick-consultation, .quick-consultation-card { width: calc(100% - 28px); max-width: 420px; }
+  .quick-consultation input, .quick-consultation select, .quick-consultation textarea,
+  form input, form select, form textarea { width: 100%; min-width: 0; }
+  .whatsapp { width: 48px; height: 48px; font-size: 24px; }
+  .scroll-top { width: 44px; height: 44px; }
+  .blog-content img, article img { width: 100%; height: auto; object-fit: cover; }
+  .blog-content, .blog-card, article { overflow-wrap: anywhere; }
+}
+
+@media (max-width: 380px) {
+  .container { width: calc(100% - 24px); }
+  header .navbar { padding-left: 12px; padding-right: 12px; }
+  header .navbar > .logo { max-width: calc(100% - 52px); }
+  header .menu-toggle { flex-basis: 40px; width: 40px; height: 40px; }
+  .hero-content h1 { font-size: 27px !important; }
+  .section-heading h2, .about-content h2, .appointment-left h2 { font-size: 25px; }
+  .expertise-content, .work-card, .testimonial, .blog-content, .service-card { padding: 16px !important; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container { width: 94%; }
+  .hero-content h1 { font-size: clamp(42px, 4.2vw, 54px); }
+}
+
+/* Mobile/tablet header and navigation visibility fixes */
+@media (max-width: 991px) {
+  /* Keep phone, email and social links off the compact header */
+  .top-bar {
+    display: none !important;
+  }
+
+  /* Ensure navigation labels remain readable on the dark green drawer */
+  header .nav-links,
+  header .nav-links > li,
+  header .nav-links > li > a,
+  header .nav-links .dropdown-menu,
+  header .nav-links .dropdown-menu > li,
+  header .nav-links .dropdown-menu > li > a {
+    color: #ffffff !important;
+  }
+
+  header .nav-links > li > a,
+  header .nav-links .dropdown-menu > li > a {
+    opacity: 1 !important;
+  }
+
+  header .nav-links > li > a:hover,
+  header .nav-links > li > a:focus,
+  header .nav-links > li > a.active,
+  header .nav-links .dropdown-menu > li > a:hover,
+  header .nav-links .dropdown-menu > li > a:focus {
+    color: #d5b36a !important;
+  }
+
+  header .nav-links .nav-chevron {
+    color: inherit !important;
+  }
+}
+
+/* V13 MOBILE + TABLET HOME HERO: match the compact, centered reference layout. */
+@media (max-width: 991px) {
+  body.home-page .hero {
+    position: relative;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: clamp(64px, 10vh, 110px) 0 48px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  body.home-page .hero-content {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 40px) !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  body.home-page .hero-content h5 {
+    margin: 0 auto 22px;
+    font-size: clamp(11px, 1.8vw, 15px) !important;
+    line-height: 1.5;
+    letter-spacing: clamp(1px, .3vw, 2.5px) !important;
+  }
+
+  body.home-page .hero-content h1 {
+    margin: 0 auto 26px !important;
+    max-width: 100%;
+    font-size: clamp(34px, 5.5vw, 48px) !important;
+    line-height: 1.17 !important;
+    text-align: center !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  body.home-page .hero-content p {
+    width: 100% !important;
+    max-width: 680px !important;
+    margin: 0 auto 28px !important;
+    font-size: clamp(15px, 2.1vw, 20px) !important;
+    line-height: 1.75 !important;
+    text-align: center !important;
+  }
+
+  body.home-page .hero-contact-actions {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin: 0 auto !important;
+  }
+
+  body.home-page .hero-contact-actions .hero-btn {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 620px !important;
+    min-height: 76px !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  body.home-page .hero-social {
+    z-index: 3;
+  }
+
+  body.home-page .dots {
+    z-index: 3;
+  }
+}
+
+@media (max-width: 640px) {
+  body.home-page .hero {
+    padding: 58px 0 42px !important;
+  }
+
+  body.home-page .hero-content {
+    width: calc(100% - 36px) !important;
+  }
+
+  body.home-page .hero-content h1 {
+    font-size: clamp(31px, 7.2vw, 40px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 24px !important;
+  }
+
+  body.home-page .hero-content p {
+    font-size: clamp(14px, 3.8vw, 17px) !important;
+    line-height: 1.7 !important;
+    margin-bottom: 26px !important;
+  }
+
+  body.home-page .hero-contact-actions .hero-btn {
+    min-height: 72px !important;
+    padding: 14px 16px !important;
+    font-size: clamp(13px, 3.6vw, 16px) !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 991px) {
+  body.home-page .hero-content h1 {
+    font-size: clamp(38px, 5.1vw, 48px) !important;
+  }
+  body.home-page .hero-content p {
+    font-size: clamp(17px, 2.2vw, 20px) !important;
+  }
+}
+
+
+/* Final fix: prevent mobile/tablet hero eyebrow and heading from being shifted under the navbar. */
+@media (max-width: 991px) {
+  body.home-page .hero {
+    padding-top: clamp(88px, 12vh, 124px) !important;
+  }
+  body.home-page .hero-content {
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    translate: none !important;
+    align-self: center !important;
+  }
+  body.home-page .hero-content h5 {
+    display: flex !important;
+    visibility: visible !important;
+    position: relative !important;
+    top: auto !important;
+    margin: 0 auto 18px !important;
+    justify-content: center !important;
+  }
+  body.home-page .hero-content h1 {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    top: auto !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 640px) {
+  body.home-page .hero {
+    padding-top: 88px !important;
+  }
+  body.home-page .hero-content h5 {
+    margin-bottom: 16px !important;
+  }
+}

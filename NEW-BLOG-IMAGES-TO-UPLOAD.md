@@ -1,0 +1,46 @@
+# New blog card images to upload
+
+Upload each image to the exact path below. Keep the existing images; these are only the newly assigned paths for cards that previously reused an image.
+
+- `images/blogs/domestic-violence-lawyer-in-delhi-protection-orders-legal.jpg`
+- `images/blogs/best-divorce-lawyers-in-delhi-ncr-mutual-contested.jpg`
+- `images/blogs/best-corporate-lawyers-in-delhi-business-legal-support.jpg`
+- `images/blogs/divorce-lawyer-in-delhi-mutual-contested-divorce-guide.jpg`
+- `images/blogs/top-divorce-lawyer-in-delhi-high-court-legal-support.jpg`
+- `images/blogs/best-family-dispute-lawyers-in-delhi-matrimonial-custody.jpg`
+- `images/blogs/how-to-file-divorce-in-india-legal-process-step-by-step.jpg`
+- `images/blogs/best-criminal-lawyer-in-delhi-criminal-defence-guide.jpg`
+- `images/blogs/best-matrimonial-lawyer-in-delhi-divorce-family-disputes.jpg`
+- `images/blogs/looking-to-hire-a-corporate-lawyer-in-delhi.jpg`
+- `images/blogs/best-child-custody-lawyer-in-delhi-legal-support-for.jpg`
+- `images/blogs/trusted-matrimonial-lawyer-in-delhi-legal-solutions.jpg`
+- `images/blogs/best-civil-lawyer-in-delhi-high-court-civil-cases-guide.jpg`
+- `images/blogs/best-criminal-law-firm-in-delhi-bail-criminal-defence.jpg`
+- `images/blogs/best-property-lawyer-in-delhi-property-dispute-guide.jpg`
+- `images/blogs/top-bail-lawyer-in-delhi-bail-matters-guide.jpg`
+- `images/blogs/best-family-lawyer-in-delhi-family-legal-support-guide.jpg`
+- `images/blogs/top-criminal-lawyer-in-delhi-criminal-defence-guide.jpg`
+- `images/blogs/trusted-divorce-lawyers-in-delhi-legal-support-guide.jpg`
+- `images/blogs/best-family-lawyer-in-delhi-divorce-custody-more.jpg`
+- `images/blogs/best-matrimonial-lawyer-in-delhi-family-dispute-guide.jpg`
+- `images/blogs/best-divorce-lawyer-in-delhi-family-law-guide.jpg`
+- `images/blogs/how-to-file-a-police-complaint-in-india-2-ways.jpg`
+- `images/blogs/how-to-file-for-divorce-when-your-spouse-refuses.jpg`
+- `images/blogs/marital-rape-in-india-legal-position-legal-guidance.jpg`
+- `images/blogs/why-should-you-hire-a-divorce-lawyer.jpg`
+- `images/blogs/surrogacy-laws-in-india-legal-overview.jpg`
+- `images/blogs/7-new-rules-in-divorce-laws-in-india.jpg`
+- `images/blogs/what-is-a-prenuptial-agreement-in-india.jpg`
+- `images/blogs/court-marriage-indian-and-foreigner.jpg`
+- `images/blogs/court-marriage-in-india-procedure-eligibility-cost.jpg`
+- `images/blogs/what-to-do-if-the-cheque-bounces.jpg`
+- `images/blogs/how-to-file-a-cheque-bounce-case-in-india.jpg`
+- `images/blogs/anticipatory-bail-in-india-bail-criminal-law-guide.jpg`
+- `images/blogs/how-to-get-bail-in-india-bail-procedure-guide.jpg`
+- `images/blogs/how-to-file-for-a-divorce-in-india.jpg`
+- `images/blogs/difference-between-contested-and-uncontested-divorce.jpg`
+- `images/blogs/how-is-alimony-in-india-decided.jpg`
+- `images/blogs/divorce-grounds-in-india-legal-reasons.jpg`
+- `images/blogs/child-custody-laws-in-india-child-custody-guide.jpg`
+- `images/blogs/how-to-avoid-paying-alimony-in-india-legal-considerations.jpg`
+- `images/blogs/6-reasons-for-divorce-in-india-legal-overview.jpg`
